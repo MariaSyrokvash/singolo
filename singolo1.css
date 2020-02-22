@@ -82,8 +82,9 @@ a {
   position: relative;
 }
 
-.logo__heading:hover {
-  color: #f06c64;
+.logo__link {
+  cursor: pointer;
+  color: inherit;
 }
 
 .star {
@@ -96,7 +97,7 @@ a {
 .header__list {
   display: flex;
   flex-basis: 370px;
-  /* flex-wrap: wrap; */
+  overflow: hidden;
 }
 
 .header__item {
@@ -213,15 +214,18 @@ a {
 .services__heading {
   font-family: 'Lato-Black';
   font-size: 30px;
-  padding-bottom: 18px;
+  padding-bottom: 19px;
+  letter-spacing: -0.25px;
 }
 
 .services__heading-info {
   font-family: 'Lato-Light';
   line-height: 30px;
   font-size: 18px;
-  padding-bottom: 45px;
   text-align: justify;
+  height: 60px;
+  overflow: hidden;
+  margin-bottom: 46px;
 }
 
 .services__list {
@@ -233,9 +237,11 @@ a {
 .services__item {
   position: relative;
   width: 33%;
-  margin-bottom: 32px;
-  max-width: 299px;
-  padding-left: 79px;
+  margin-bottom: 37px;
+  max-width: 300px;
+  padding-left: 80px;
+  height: 86px;
+  overflow: hidden;
 }
 
 .services__item::after {
@@ -246,7 +252,7 @@ a {
   height: 62px;
   background-repeat: no-repeat;
   top: 0;
-  left: -1px;
+  left: 0;
 }
 
 .services__item--design::after {
@@ -277,7 +283,7 @@ a {
   font-size: 17.77px;
   font-family: "Lato-Black";
   line-height: 17.63px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
 }
 
 .services__info {
