@@ -1,2 +1,2 @@
 # singolo
-https://MariaSyrokvash.github.io/singolo/singolo1.html
+https://MariaSyrokvash.github.io/singolo/
