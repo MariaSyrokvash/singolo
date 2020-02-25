@@ -39,6 +39,7 @@ input[type="radio"].visually-hidden {
   width: 980px;
   margin: 0 auto;
   padding: 0 20px;
+  /* background-color: red; */
 }
 
 img {
@@ -163,17 +164,21 @@ a {
 
 .layout-3-column {
   display: flex;
+  justify-content: space-between;
 }
 
-/* .employee__content {
-  width: 33.3%;
-} */
+.employee__content {
+  display: flex;
+  flex-direction: column;
+  width: 302px;
+}
 
 .employee__person1 {
   background-image: url('./assets/img/person1.png');
   background-repeat: no-repeat;
   width: 302px;
   height: 302px;
+  margin-bottom: 16px;
 }
 
 .employee__person2 {
@@ -181,6 +186,7 @@ a {
   background-repeat: no-repeat;
   width: 302px;
   height: 302px;
+  margin-bottom: 16px;
 }
 
 .employee__person3 {
@@ -188,23 +194,34 @@ a {
   background-repeat: no-repeat;
   width: 302px;
   height: 302px;
+  margin-bottom: 16px;
 }
 
 .employee__title {
   font-size: 18px;
   font-family: "Lato-Black";
   color: #666D89;
-  line-height: 17,86px;
+  line-height: 17.86px;
+  margin-bottom: 11px;
 }
 
 .employee__text {
   font-size: 12px;
   font-family: "Lato-Regular";
   color: #767E9E;
-  line-height: 21,56px;
+  line-height: 21.56px;
+  text-align: justify;
+  margin-bottom: 22px;
 }
 
 .social__list {
   display: flex;
 }
 
+.social__item {
+  padding-right: 7px;
+}
+
+.social__link {
+  cursor: pointer;
+}
