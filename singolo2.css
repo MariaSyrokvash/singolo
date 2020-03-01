@@ -108,7 +108,7 @@ a {
 .tag_selected {
   border: 1px solid #c5c5c5;
   color: #dedede;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.65px;
 }
 
 .tag_selected:hover {
@@ -151,7 +151,7 @@ a {
 .about-us__heading {
   font-size: 30px;
   font-family: "Lato-Black";
-  color: #767e9e;
+  color: #666d89;
   line-height: 34.86px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -175,7 +175,7 @@ a {
 .employee__content {
   display: flex;
   flex-direction: column;
-  width: 302px;
+  width: 301px;
 }
 
 .employee__person1 {
@@ -210,6 +210,7 @@ a {
   margin-bottom: 11px;
   height: 15.66px;
   overflow: hidden;
+  word-spacing: -0.95px;
 }
 
 .employee__text {
