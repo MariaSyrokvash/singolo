@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato-Regular', sans-serif;
+  width: 100%;
+}
+
+*,
+::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* 
+{
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact {
+  height: 648px;
+  background-color: #f06c64;
+}
+
+.contact__heading {
+  font-size: 30px;
+  line-height: 18px;
+  color: #f0d8d9;
+  font-family: 'Lato-Black';
+  padding-top: 68px;
+  margin-bottom: 27px;
+  letter-spacing: -0.07px;
+}
+
+.contact__description {
+  font-size: 18px;
+  font-family: "Lato-Light";
+  line-height: 30px;
+  margin-bottom: 40px;
+  color: #f0d8d9;
+  text-align: justify;
+}
+
+.layout-2-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .contact__form {
+  width: 70%;
+} */
+
+.contact__title,
+.contact__text {
+  color: #f0d8d9;
+}
+
+.contact__title {
+  font-family: "Lato-Bold";
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.contact__text {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.contact__input {
+  outline: none;
+  border: none;
+  width: 619px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: #d6564f;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+.contact__textarea {
+  width: 619px;
+  background-color: #d6564f;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.footer__link--facebook,
+.footer__link--google,
+.footer__link--linkedin,
+.footer__link--twitter {
+  fill: #666d89;
+  width: 33.5px; 
+  height: 33.5px;
+}
+
+.footer__link--facebook:hover,
+.footer__link--google:hover,
+.footer__link--linkedin:hover,
+.footer__link--twitter:hover {
+  fill: #15c2f7;
+  cursor: pointer;
+}
+
+
+
+.footer {
+  height: 76px;
+  background-color: #2d303a;
+}
+
+.footer__list {
+  display: flex;
+}
+.footer__item {
+  padding-right: 7px;
+}
+
+.footer__link {
+  cursor: pointer;
+}
