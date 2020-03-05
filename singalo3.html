@@ -12,32 +12,35 @@
 <body>
   <main>
     <section class="contact">
-      <div class="container contact__inner">
+      <div class="container">
         <h2 class="contact__heading">Get a Quote</h2>
         <p class="contact__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <div class="layout-2-column ">
+        <div class="layout-2-column contact__inner">
           <div class="contact__form">
             <form action method="POST">
               <input class="contact__input" type="text" name="name" placeholder="Name (Required)" required>
               <input class="contact__input" type="email" name="email" placeholder="Email (Required)" required>
               <input class="contact__input" type="text" name="subject" placeholder="Subject">
-              <textarea class="contact__textarea" name="question" placeholder="Describe your project in detail..."></textarea>
+              <textarea class="contact__line" name="question" placeholder="Describe your project in detail..."></textarea>
+              <div class="contact__button">
+                <button type="submit" class="button button_send">Submit</button>
+              </div>
             </form>
           </div>
           <div class="contact__content">
             <h3 class="contact__title">Contact Information</h3>
             <p class="contact__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
-            <p>
+            <p class="contact__link">
               <span class="ico ico_adress"></span>
-              <span>Elm St. 14/05 Lost City</span>
+              <span class="contact__info contact__adress">Elm St. 14/05 Lost City</span>
             </p>
-            <p>
+            <p class="contact__phone">
               <span class="ico ico_phone"></span>
-              <a href="tel:035283318635">03528 331 86 35</a>
+              <a class="contact__info" href="tel:035283318635">03528 331 86 35</a>
             </p>
-            <p>
+            <p class="contact__link">
               <span class="ico ico_email"></span>
-              <a href="mailto:info@singolo.com">info@singolo.com</a>
+              <a class="contact__info" href="mailto:info@singolo.com">info@singolo.com</a>
             </p>
           </div>
         </div>
@@ -45,8 +48,8 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="layout-2-column footer__inner">
-          <p class="footer__copyright">Copyright</p>
+        <div class="footer__inner">
+          <p class="footer__copyright">© Copyright 2013</p>
           <ul class="social footer__list">
             <li class="footer__item">
               <a class="footer__link">
@@ -65,7 +68,7 @@
             </li>
             <li class="footer__item">
               <a class="footer__link">
-                <svg class="social__link--linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31"><path d="M15.5,0A15.5,15.5,0,1,0,31,15.5,15.51,15.51,0,0,0,15.5,0Zm0,30A14.5,14.5,0,1,1,30,15.5,14.51,14.51,0,0,1,15.5,30Z"/><rect x="8.58" y="12.77" width="2.99" height="9.63"/><path d="M10.09,8.6a1.5,1.5,0,1,0,0,3,1.5,1.5,0,1,0,0-3Z"/><path d="M19.05,12.56a3.45,3.45,0,0,0-3,1.55H16l-.14-1.34h-2.6c0,.87.08,1.87.08,3.07V22.4h3V16.85a2.41,2.41,0,0,1,.09-.75A1.65,1.65,0,0,1,18,15c1.08,0,1.52.84,1.52,2.09V22.4h3V16.71C22.5,13.88,21,12.56,19.05,12.56Z"/></svg>
+                <svg class="footer__link--linkedin" id="All_glyphs" data-name="All glyphs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31"><title>linkedin</title><path d="M15.5,0A15.5,15.5,0,1,0,31,15.5,15.51,15.51,0,0,0,15.5,0Zm0,30A14.5,14.5,0,1,1,30,15.5,14.51,14.51,0,0,1,15.5,30Z"/><rect x="8.58" y="12.77" width="2.99" height="9.63"/><path d="M10.09,8.6a1.5,1.5,0,1,0,0,3,1.5,1.5,0,1,0,0-3Z"/><path d="M19.05,12.56a3.45,3.45,0,0,0-3,1.55H16l-.14-1.34h-2.6c0,.87.08,1.87.08,3.07V22.4h3V16.85a2.41,2.41,0,0,1,.09-.75A1.65,1.65,0,0,1,18,15c1.08,0,1.52.84,1.52,2.09V22.4h3V16.71C22.5,13.88,21,12.56,19.05,12.56Z"/></svg>
               </a>
             </li>
           </ul>
