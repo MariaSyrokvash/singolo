@@ -20,19 +20,19 @@
       </div>
       <ul class="header__list">
         <li class="header__item">
-          <a href="#" class="header__link header__link--current">Home</a>
+          <a href="#home" class="header__link header__link--current">Home</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Services</a>
+          <a href="#services" class="header__link">Services</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Portfolio</a>
+          <a href="#portfolio" class="header__link">Portfolio</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">About</a>
+          <a href="#about" class="header__link">About</a>
         </li>
         <li class="header__item">
-          <a href="#" class="header__link">Contact</a>
+          <a href="#contact" class="header__link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -42,25 +42,36 @@
       <div class="container">
         <div class='slider__inner'>
           <div class="slider__btn">
-            <button class="slider__btn-prev" type="button">
+            <button class="slider__btn-prev left" type="button">
               <span class="visually-hidden">Шаг назад</span>
             </button>
-            <div class="slider__phone">
+            <div class="slider__phone active">
               <div class="slider__phone--vertical">
                 <img src="assets/img/vertical-phone.png" alt="iPhone Vertical">
               </div>
               <div class="slider__phone--horizontal">
                 <img src="assets/img/horizontal-phone.png" alt="iPhone Horizontal">
               </div>
+              <div class="vertical-off">
+                <img src="assets/img/vertical-off.png" alt="iPhone Horizontal">
+              </div>
+              <div class="horizontal-off">
+                <img src="assets/img/horizontal-off.png" alt="iPhone Horizontal">
+              </div>
             </div>
-            <button class="slider__btn-next" type="button">
+            <div class="slider__phone second">
+              <div class="slider__phone--second">
+                <img src="assets/img/Slider.png" alt="iPhone Vertical">
+              </div>
+            </div>
+            <button class="slider__btn-next right" type="button">
               <span class="visually-hidden">Шаг вперед</span>
             </button>
           </div>
         </div>
       </div>
     </section>
-    <section class="services">
+    <section id="services" class="services">
       <div class="container">
         <h2 class="services__heading">Our Services</h2>
         <p class="services__heading-info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -92,7 +103,7 @@
         </ul>
       </div>
     </section>
-    <section class='portfolio'>
+    <section class='portfolio' id="portfolio">
       <div class="container portfolio__inner">
         <h2 class="portfolio__heading">Portfolio</h2>
         <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -102,47 +113,47 @@
           <span class="tag tag_bordered">Graphic Design</span>
           <span class="tag tag_bordered">Artwork</span>
         </div>
-        <div class="layout-4-column">
+        <div class="layout-4-column preview-set">
           <div class="preview">
-            <img src="./assets/img/img1.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img1.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img2.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img2.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img3.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img3.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img4.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img4.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img5.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img5.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img6.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img6.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img7.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img7.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img8.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img8.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img9.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img9.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img10.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img10.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img11.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img11.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
           <div class="preview">
-            <img src="./assets/img/img12.png" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
+            <img src="./assets/img/img12.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
           </div>
         </div>
       </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about">
       <div class="container about-us__inner">
         <h2 class="about-us__heading">About Us</h2>
         <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -231,20 +242,21 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <h2 class="contact__heading">Get a Quote</h2>
         <p class="contact__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-2-column contact__inner">
           <div class="contact__form">
             <form action method="POST">
-              <input class="contact__input" type="text" name="name" placeholder="Name (Required)" required>
-              <input class="contact__input" type="email" name="email" placeholder="Email (Required)" required>
-              <input class="contact__input" type="text" name="subject" placeholder="Subject">
-              <textarea class="contact__line" name="question" placeholder="Describe your project in detail..."></textarea>
+              <input class="contact__input" type="text" name="name" id="name" placeholder="Name (Required)" required>
+              <input class="contact__input" type="email" name="email" id="email" placeholder="Email (Required)" required>
+              <input class="contact__input" type="text" name="subject" id="subject" placeholder="Subject">
+              <textarea class="contact__line" name="question" id="desc" placeholder="Describe your project in detail..."></textarea>
               <div class="contact__button">
-                <button type="submit" class="button button_send">Submit</button>
+                <button type="submit" id="say" class="button button_send">Submit</button>
               </div>
+              <div id="result"></div>
             </form>
           </div>
           <div class="contact__content">
@@ -296,5 +308,6 @@
         </div>
       </div>
     </footer>
+  <script src="script.js"></script>
 </body>
 </html>
