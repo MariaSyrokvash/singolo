@@ -85,20 +85,6 @@ document.querySelector('.slider__phone--horizontal').addEventListener('click', (
   })
 });
 
-
-// переключение тегов
-
-let portfolioTags = document.querySelector('.portfolio__tags');
-
-portfolioTags.addEventListener('click', (event) => {
-  portfolioTags.querySelectorAll('.tag').forEach(item => {
-      item.classList.remove('tag_selected');
-  });
-  event.target.classList.add('tag_selected');
-});
-
-
-
 // выделение картинок в портфолио
 
 let preview = document.querySelector('.preview-set');
@@ -109,3 +95,59 @@ preview.addEventListener('click', (event) =>{
     }  
 })
 
+
+let picSet = document.querySelectorAll('.preview-set img');
+let portfolioTags = document.querySelectorAll('.tag');
+
+portfolioTags.forEach(el => el.addEventListener('click', (event) => {
+  if (!event.target.classList.contains('tag_selected') && !event.target.parentElement.classList.contains('tag_bordered')) {
+   portfolioTags.forEach(el => el.classList.remove('tag_selected'));
+    if (event.target.tagName === 'SPAN') {
+      event.target.classList.add('tag_selected');
+    } else {
+      event.target.parentElement.classList.add('tag_bordered');
+    }
+    shiftImages();
+  }
+}));
+
+function shiftImages() {
+  let sources = Array.from(picSet).map(el => el.getAttribute('src'));
+  sources.push(sources[0]);
+  sources.shift();
+  for (let i = 0; i < sources.length; i++) {
+    picSet.item(i).setAttribute('src', sources[i]);
+  }
+  picSet.forEach(el => el.classList.remove('outline'));
+}
+
+
+function myBtn() {
+   event.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var desc = document.getElementById('desc').value;
+    var html = '<h1>Форма отправлена</h1><br><b>Имя :</b>' + (name || 'Без имени') + '<br><b>Почта :</b>' + (email || 'Без емейла') + '<br><b>Тема :</b>' + (subject || 'Без темы') + '<br><b>Описание :</b>' + (desc || 'Без описания');
+ 
+    document.getElementById('result').innerHTML = html;
+}
+ 
+document.getElementById('myBtn').addEventListener('click', myBtn);
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
