@@ -15,30 +15,20 @@
     <nav class="menu container">
       <div class="logo">
         <p class="logo__heading">
-          <a href=index.html class="logo__link">Singolo</a>
+          <span class="logo__link">Singolo</span>
           <span class="star">*</span></p>
       </div>
       <ul class="header__list">
-        <li class="header__item">
-          <a href="#home" class="header__link header__link--current">Home</a>
-        </li>
-        <li class="header__item">
-          <a href="#services" class="header__link">Services</a>
-        </li>
-        <li class="header__item">
-          <a href="#portfolio" class="header__link">Portfolio</a>
-        </li>
-        <li class="header__item">
-          <a href="#about" class="header__link">About</a>
-        </li>
-        <li class="header__item">
-          <a href="#contact" class="header__link">Contact</a>
-        </li>
+        <li><a class="link-current" href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class='slider'>
+    <section class='slider' id='home'>
       <div class="container">
         <div class='slider__inner'>
           <div class="slider__btn">
@@ -248,7 +238,7 @@
         <p class="contact__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-2-column contact__inner">
           <div class="contact__form">
-            <form action method="POST">
+            <form action method="POST" id="myform">
               <input class="contact__input" type="text" name="name" id="name" placeholder="Name (Required)" required>
               <input class="contact__input" type="email" name="email" id="email" placeholder="Email (Required)" required>
               <input class="contact__input" type="text" name="subject" id="subject" placeholder="Subject">
@@ -257,14 +247,15 @@
                 <button type="submit" id="myBtn" class="button button_send">Submit</button>
               </div>
             </form>
+        <!-- Modal content -->
             <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div id="result"></div>
+              <div class="modal-content">
+                <div id="result"></div>
+                <div class="close-block">
+                  <button class="close" id="close">ok</button>
+                </div>
+              </div>
             </div>
-          </div>
-
           </div>
           <div class="contact__content">
             <h3 class="contact__title">Contact Information</h3>

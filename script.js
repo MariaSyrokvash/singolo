@@ -1,12 +1,41 @@
-// изменение навигации в хедере
-let headerList = document.querySelector('.header__list');
 
-headerList.addEventListener('click', (event) => {
-  headerList.querySelectorAll('.header__link').forEach(item => {
-      item.classList.remove('header__link--current');
+const menu = document.querySelector("nav ul");
+const menuLinks = document.querySelectorAll("nav ul li a");
+
+menuLinks.forEach( link => link.addEventListener("click", (event) => {
+  menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
+  event.target.classList.add("current");
+}));
+
+document.addEventListener("scroll", changeMenuActiveLink);
+window.onload = changeMenuActiveLink();
+
+function changeMenuActiveLink(event) {
+  const currentPositionY = window.scrollY;
+  const tagsWithId = document.querySelectorAll('[id]');
+
+  tagsWithId.forEach( tag => {
+    if (tag.offsetTop - 120 <= currentPositionY &&
+       (tag.offsetTop + tag.offsetHeight - 120) > currentPositionY) {
+      menuLinks.forEach( link => {
+        link.classList.remove("current");
+        if(tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
+          link.classList.add("current");
+        }
+      });
+    }
   });
-  event.target.classList.add('header__link--current');
-});
+  
+}
+// // изменение навигации в хедере
+// let headerList = document.querySelector('.header__list');
+
+// headerList.addEventListener('click', (event) => {
+//   headerList.querySelectorAll('.header__link').forEach(item => {
+//       item.classList.remove('header__link--current');
+//   });
+//   event.target.classList.add('header__link--current');
+// });
 
 
 // карусель
@@ -121,33 +150,43 @@ function shiftImages() {
   picSet.forEach(el => el.classList.remove('outline'));
 }
 
+// Модальное окно
+
+
+let modal = document.getElementById("myModal");
+let btnSubmit = document.getElementById("myBtn");
+let btnClose = document.getElementById("close");
+
 
 function myBtn() {
-   event.preventDefault();
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var desc = document.getElementById('desc').value;
-    var html = '<h1>Форма отправлена</h1><br><b>Имя :</b>' + (name || 'Без имени') + '<br><b>Почта :</b>' + (email || 'Без емейла') + '<br><b>Тема :</b>' + (subject || 'Без темы') + '<br><b>Описание :</b>' + (desc || 'Без описания');
- 
-    document.getElementById('result').innerHTML = html;
-}
- 
-document.getElementById('myBtn').addEventListener('click', myBtn);
+  event.preventDefault(); //отменяем дефолтное поведение
 
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
+  let subject = document.getElementById('subject').value;
+  let desc = document.getElementById('desc').value;
+  let theme = subject ? '<b>Тема: </b>' + subject  :'<b> Без темы </b>';
+  let textDescription = desc ? '<b>Описание: </b>' + subject  :'<b> Без описания </b>';
 
-btn.onclick = function() {
+  let html = '<h1>Письмо отправлено</h1><br>' + '<br>' + theme +'<br>' + textDescription;
+  let result = document.getElementById('result');
+
+  result.innerHTML = html; //отправляем содержимое input в модальное окно
+};
+ 
+document.getElementById('myBtn').addEventListener('click', myBtn); //вышаем слушатель на кнопку submit
+
+btnSubmit.onclick = function() { // при клике кнопки submit - показываем модальное окно
+  event.preventDefault();
   modal.style.display = "block";
 }
-span.onclick = function() {
+
+btnClose.onclick = function() {  //при клике на ОК модального окна - закрывается
   modal.style.display = "none";
+  document.getElementById('myform').reset();  //сбрасываем value
 }
 
-window.onclick = function(event) {
+window.onclick = function(event) { //при клике вне модального окна - модальное окно закрывается и сбрасываются value
   if (event.target == modal) {
     modal.style.display = "none";
+    document.getElementById('myform').reset();
   }
 }
