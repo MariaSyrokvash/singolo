@@ -1,22 +1,22 @@
 
-const menu = document.querySelector("nav ul");
-const menuLinks = document.querySelectorAll("nav ul li a");
+const nav = document.querySelector("nav ul");
+const menuLinks = document.querySelectorAll('nav ul li a');
 
-menuLinks.forEach( link => link.addEventListener("click", (event) => {
-  menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
+menuLinks.forEach( link => link.addEventListener('click', (event) => {
+  nav.querySelectorAll('a').forEach(e => e.classList.remove('current'));
   event.target.classList.add("current");
 }));
 
-document.addEventListener("scroll", changeMenuActiveLink);
-window.onload = changeMenuActiveLink();
+document.addEventListener('scroll', changeLink);
+window.onload = changeLink();
 
-function changeMenuActiveLink(event) {
-  const currentPositionY = window.scrollY;
-  const tagsWithId = document.querySelectorAll('[id]');
+function changeLink(event) {
+  const currentPosition = window.scrollY;
+  const section = document.querySelectorAll('[id]');
 
-  tagsWithId.forEach( tag => {
-    if (tag.offsetTop - 120 <= currentPositionY &&
-       (tag.offsetTop + tag.offsetHeight - 120) > currentPositionY) {
+  section.forEach( tag => {
+    if (tag.offsetTop - 120 <= currentPosition &&
+       (tag.offsetTop + tag.offsetHeight - 120) > currentPosition) {
       menuLinks.forEach( link => {
         link.classList.remove("current");
         if(tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
@@ -25,18 +25,7 @@ function changeMenuActiveLink(event) {
       });
     }
   });
-  
 }
-// // изменение навигации в хедере
-// let headerList = document.querySelector('.header__list');
-
-// headerList.addEventListener('click', (event) => {
-//   headerList.querySelectorAll('.header__link').forEach(item => {
-//       item.classList.remove('header__link--current');
-//   });
-//   event.target.classList.add('header__link--current');
-// });
-
 
 // карусель
 
