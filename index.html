@@ -18,7 +18,17 @@
           <span class="logo__link">Singolo</span>
           <span class="star">*</span></p>
       </div>
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
       <ul class="header__list">
+        <li class="mobile-logo">
+          <div class="logo">
+          <p class="logo__heading">
+          <span class="logo__link">Singolo</span>
+          <span class="star">*</span></p>
+        </li>
         <li><a class="link-current" href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
@@ -27,6 +37,8 @@
       </ul>
     </nav>
   </header>
+
+
   <main>
     <section class='slider' id='home'>
       <div class="container">
@@ -103,43 +115,45 @@
           <span class="tag tag_bordered">Graphic Design</span>
           <span class="tag tag_bordered">Artwork</span>
         </div>
-        <div class="layout-4-column preview-set">
-          <div class="preview">
-            <img src="./assets/img/img1.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img2.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img3.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img4.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img5.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img6.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img7.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img8.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img9.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img10.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img11.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
-          <div class="preview">
-            <img src="./assets/img/img12.png" id="image" class="preview__img" width="220" height="187" alt="Предварительный просмотр работы">
-          </div>
+        <div class="preview-set">
+          <ul class="layout-4-column">
+            <li class="preview-item">
+              <img src="./assets/img/img1.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img2.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img3.png" id="image" class="preview__img"  alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img4.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img5.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img6.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img7.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img8.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img9.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img10.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img11.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+            <li class="preview-item">
+              <img src="./assets/img/img12.png" id="image" class="preview__img" alt="Предварительный просмотр работы">
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -149,7 +163,9 @@
         <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="layout-3-column">
           <div class="employee__content">
-            <div class="employee__person1"></div>
+            <div class="employee__person1">
+              <img src="./assets/img/person1.png">
+            </div>
             <h3 class="employee__title">Adam Jensen</h3>
             <p class="employee__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
             <ul class="social social__list">
@@ -176,7 +192,9 @@
             </ul>
           </div>
           <div class="employee__content">
-            <div class="employee__person2"></div>
+            <div class="employee__person2">
+              <img src="./assets/img/person2.png">
+            </div>
             <h3 class="employee__title">Desmond Miles</h3>
             <p class="employee__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
             <ul class="social social__list">
@@ -203,7 +221,9 @@
             </ul>
           </div>
           <div class="employee__content">
-            <div class="employee__person3"></div>
+            <div class="employee__person3">
+              <img src="./assets/img/person3.png">
+            </div>
             <h3 class="employee__title">Scolara Visari</h3>
             <p class="employee__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
             <ul class="social social__list">
