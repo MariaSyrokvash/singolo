@@ -1778,4 +1778,22 @@ nav.container {
 .mobile-logo {
     display: block;
 }
+.vertical-off img {
+    height: 59%;
+    width: 36%;
+}
+.vertical-off {
+    padding-top: 15%;
+    padding-left: 3%;
+    padding-right: 8%;
+    cursor: pointer;
+}
+.horizontal-off img {
+    height: 60%;
+    width: 90%;
+}
+.horizontal-off {
+    padding-left: 40%;
+    padding-top: 30%;
+}
 }
